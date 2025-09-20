@@ -1,0 +1,146 @@
+/* --------------------------
+   Base / Variables
+   -------------------------- */
+:root{
+  --bg: #f6f7fb;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --accent: #2563eb; /* blue */
+  --accent-2: #0ea5a4; /* teal */
+  --radius: 10px;
+  --max-width: 980px;
+  --gap: 18px;
+  --container-padding: 20px;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color-scheme: light;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%; margin:0; background:var(--bg); color:#111}
+a{color:var(--accent); text-decoration:none}
+a:focus, a:active, a:hover { outline: none; text-decoration: underline; }
+
+/* Visible focus for accessibility */
+:focus {
+  outline: 3px solid rgba(37,99,235,0.18);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* --------------------------
+   Layout Container
+   -------------------------- */
+.container{
+  max-width: var(--max-width);
+  margin: 28px auto;
+  padding: var(--container-padding);
+}
+
+/* Header */
+.header{
+  display:flex;
+  gap: 16px;
+  align-items:center;
+  margin-bottom: 18px;
+}
+.avatar{
+  width:110px;
+  height:110px;
+  object-fit:cover;
+  border-radius: 12px;
+  border: 3px solid #fff;
+  box-shadow: 0 6px 18px rgba(16,24,40,0.08);
+  background: linear-gradient(135deg,var(--accent),var(--accent-2));
+}
+
+/* Name + title */
+.name{
+  margin: 0;
+  font-size: 1.65rem;
+  letter-spacing: -0.5px;
+}
+.title{
+  margin: 6px 0;
+  color: var(--muted);
+  font-weight: 600;
+}
+.contact a { color: var(--muted); font-size: 0.95rem; margin-right: 8px; }
+
+/* --------------------------
+   Grid: sidebar + main
+   -------------------------- */
+.grid{
+  display:grid;
+  grid-template-columns: 290px 1fr;
+  gap: var(--gap);
+  align-items:start;
+}
+
+/* Card style */
+.card{
+  background: var(--card);
+  padding: 16px;
+  border-radius: var(--radius);
+  box-shadow: 0 6px 22px rgba(16,24,40,0.06);
+}
+
+/* Sidebar */
+.sidebar .skills{ list-style:none; padding:0; margin:0; display:grid; gap:8px }
+.skills li{ background: linear-gradient(90deg, rgba(37,99,235,0.07), rgba(14,165,164,0.03)); padding:8px 10px; border-radius:8px; font-weight:600; color:#0f172a; font-size:0.95rem }
+
+.links{ list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:8px }
+.links a{ padding:6px 8px; border-radius:6px; display:inline-block; transition: transform .15s ease, box-shadow .15s ease; }
+.links a:hover{ transform: translateY(-3px); box-shadow: 0 8px 20px rgba(16,24,40,0.08) }
+
+/* Main content (jobs/projects etc.) */
+.main .job{ margin-bottom: 12px }
+.job-title{ margin: 0 0 4px 0; font-size: 1.05rem }
+.job-meta{ margin: 0 0 8px 0; color: var(--muted); font-size: 0.9rem }
+
+/* List styles in main */
+.main ul{ margin: 8px 0 0 1.1rem; padding: 0; }
+.main li{ margin-bottom:8px }
+
+/* headings inside cards */
+.card h2{ margin:0 0 10px 0; font-size:1.1rem; color: #0f172a }
+.card h3{ margin:0 0 6px 0; font-size: 1rem }
+
+/* Footer */
+.footer{ text-align:center; margin-top:20px; color:var(--muted) }
+
+/* --------------------------
+   Hover & Micro-interactions
+   -------------------------- */
+.card h2{ transition: color .18s ease, transform .12s ease; cursor: default }
+.card h2:hover{ color: var(--accent); transform: translateY(-2px) }
+a:hover{ color: var(--accent-2) }
+
+/* --------------------------
+   Responsive
+   -------------------------- */
+@media (max-width: 880px){
+  .grid{ grid-template-columns: 1fr; }
+  .header{ flex-direction:row; align-items:center }
+  .avatar{ width:86px; height:86px }
+  .name{ font-size:1.35rem }
+}
+
+/* Smaller phones */
+@media (max-width: 480px){
+  .container{ padding:12px }
+  .header{ gap:10px }
+  .name{ font-size:1.2rem }
+  .title{ font-size:0.95rem }
+  .grid{ gap:12px }
+  .card{ padding:12px }
+  .skills li{ font-size:0.92rem }
+}
+
+/* Print-friendly adjustments */
+@media print{
+  :root{ color-scheme: light }
+  body{ background: #fff }
+  .avatar{ display:none }
+  .grid{ grid-template-columns: 1fr; }
+  a::after { content: " (" attr(href) ")"; font-size:0.8em; color:#333 }
+}

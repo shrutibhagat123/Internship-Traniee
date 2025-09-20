@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRAINIEE SESSION</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+  <main class="container">
+    <!-- Header -->
+    <header class="header" role="banner">
+      <div class="profile">
+        <!-- Replace profile.jpg with your own photo (keep alt descriptive) -->
+        <img src="IMG-20220703-WA0223.jpg" alt="Profile photo of YOUR NAME" class="avatar" />
+      </div>
+      <div class="intro">
+        <h1 class="name">SHRUTI BHAGAT</h1>
+        <p class="title">Aspiring Web Developer / Frontend Developer</p>
+        <p class="contact">
+          <a href="mailto:youremail@example.com">sb27@gmail.com</a> •
+          <a href="tel:+911234567890">+91 12 3456 7890</a> •
+          <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
+        </p>
+      </div>
+    </header>
+
+    <!-- Grid layout: left column (sidebar) + right column (main) -->
+    <div class="grid">
+      <!-- LEFT: Profile + Skills + Social -->
+      <aside class="sidebar" aria-labelledby="profile-heading">
+        <section id="profile-heading" class="card">
+          <h2>Profile</h2>
+          <p>
+            A motivated web developer with hands-on experience building responsive web pages using
+            HTML, CSS, and JavaScript. Passionate about accessible, user-first design.
+          </p>
+        </section>
+
+        <section class="card" aria-labelledby="skills-heading">
+          <h2 id="skills-heading">Skills</h2>
+          <ul class="skills">
+            <li>HTML5 &amp; Semantic Markup</li>
+            <li>CSS3 (Flexbox, Grid, Responsive)</li>
+            <li>JavaScript </li>
+            <li>Git &amp; GitHub</li>
+            <li>Basic React</li>
+          </ul>
+        </section>
+
+        <section class="card" aria-labelledby="social-heading">
+          <h2 id="social-heading">Social / Portfolio</h2>
+          <ul class="links">
+            <li><a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://yourportfolio.example" target="_blank" rel="noopener">Portfolio</a></li>
+          </ul>
+        </section>
+      </aside>
+
+      <!-- RIGHT: Experience, Education, Projects, Certifications, Hobbies -->
+      <section class="main" aria-labelledby="experience-heading">
+        <article class="card" id="experience" aria-labelledby="experience-heading">
+          <h2 id="experience-heading">Work Experience / Projects</h2>
+
+          <!-- If you have work experience, list it here; otherwise use projects -->
+          <div class="job">
+            <h3 class="job-title">Frontend Developer Intern — ABC Company</h3>
+            <p class="job-meta">May 2025 &mdash; Aug 2025</p>
+            <ul>
+              <li>Built responsive landing pages using HTML/CSS and improved performance by 20%.</li>
+              <li>Implemented accessible navigation and semantic markup across component library.</li>
+            </ul>
+          </div>
+
+          <div class="job">
+            <h3 class="job-title">Portfolio Project: Recipe Finder</h3>
+            <p class="job-meta">Personal Project &mdash; 2025</p>
+            <ul>
+              <li>React single-page app that consumes a public recipe API and stores favorites in localStorage.</li>
+              <li>Responsive UI and keyboard-accessible controls; unit-tested key components.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card" id="education" aria-labelledby="education-heading">
+          <h2 id="education-heading">Education</h2>
+          <ul>
+            <li>
+              <strong>B.CA. in Computer Applications</strong>, University Name — 2024
+            </li>
+            <li>
+              Relevant Coursework: Web Development, Data Structures, UI/UX Basics
+            </li>
+          </ul>
+        </article>
+
+        <article class="card" id="projects" aria-labelledby="projects-heading">
+          <h2 id="projects-heading">Selected Projects</h2>
+          <ul class="projects-list">
+            <li>
+              <strong>Todo Tracker</strong> — Vanilla JS app with local persistence and filter/search.
+            </li>
+            <li>
+              <strong>Resume Builder</strong> — Static site generator to export printable resumes (HTML/CSS).
+            </li>
+          </ul>
+        </article>
+
+        <article class="card" id="certs" aria-labelledby="certs-heading">
+          <h2 id="certs-heading">Certifications</h2>
+          <ul>
+            <li>Responsive Web Design — freeCodeCamp</li>
+            <li>JavaScript Algorithms &amp; Data Structures — freeCodeCamp</li>
+          </ul>
+        </article>
+
+        <article class="card" id="hobbies" aria-labelledby="hobbies-heading">
+          <h2 id="hobbies-heading">Hobbies &amp; Interests</h2>
+          <p>Photography, reading tech blogs, practising accessibility, and hiking.</p>
+        </article>
+      </section>
+    </div>
+
+    <footer class="footer" role="contentinfo">
+      <p>Made with ♥ — <a href="https://github.com/yourusername" target="_blank" rel="noopener">shruutiiizz.027</a></p>
+    </footer>
+  </main>
+
+
+ 
+</body>
+</html>
